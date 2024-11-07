@@ -1,0 +1,7 @@
+screeninfo
+pyperclip
+panda3d-gltf
+
+-f wheels
+panda3d
+ursina
