@@ -1,52 +1,62 @@
 # Ursina on Mobile
 
-* [Step 1 - Setting up the environnment](#step-1-setting-up-the-environnment)
+Steps:
+* [Step 1 - Setting up the environment](#step-1-setting-up-the-environment)
 * [Step 2 - Compiling the project](#step-2-compiling-the-project)
 * [Step 3 - Installing the app](#step-3-installing-the-app)
 
-# Step 1: Setting up the environnment
+## Step 1: Setting up the environment
+
+* [Step 1.a - Clone the repo and install Python](#step-1a-clone-the-repo-and-install-python)
+* [Step 1.b - Installing Panda3D](#step-1b-installing-panda3d)
+* [Step 1.c - Setting up your game](#step-1c-setting-up-your-game)
+
+### Step 1.a: Clone the repo and install Python
 First, clone this repository with:
 ```bash
 git clone https://github.com/PaologGithub/UrsinaForMobile
 ```
 
 Then, install [Python 3.8](https://www.python.org/downloads/release/python-380/)
-This step is really important, because Panda3D for android requires python3.8
+This step is really important, because Panda3D for Android requires Python 3.8.
+I tested with Python 3.10, and it didn't work, because of outdated wheels.
 
-Then, you'll need to install Panda3D 1.11. To do this, you'll need to do this:
+### Step 1.b: Installing Panda3D
+Then, you'll need to install Panda3D 1.11. For this step, please run this command:
 
-### For Windows:
+For Windows:
 ```bash
 python3.8 -m pip install https://buildbot.panda3d.org/downloads/68f0931f43284345893a90d5bba9ba5df8aa53bb/panda3d-1.11.0.dev2480-cp38-cp38-win_amd64.whl
 ```
-### For macosX:
+For macOS X (Not sure if it works with macOS 11+):
 ```bash
 python3.8 -m pip install https://buildbot.panda3d.org/downloads/68f0931f43284345893a90d5bba9ba5df8aa53bb/panda3d-1.11.0.dev2480-cp38-cp38-macosx_10_9_x86_64.whl
 ```
-### For Linux:
+For Linux:
 ```bash
 python3.8 -m pip install https://buildbot.panda3d.org/downloads/68f0931f43284345893a90d5bba9ba5df8aa53bb/panda3d-1.11.0.dev2480-cp38-cp38-manylinux2010_x86_64.whl
 ```
 
-If pip gives you error about wheel not existing, please [make an issue](https://github.com/PaologGithub/UrsinaForMobile/issues), so I can fix it.
+If pip shows an error about the wheel not existing, please [make an issue](https://github.com/PaologGithub/UrsinaForMobile/issues), so I can remake the links.
 
-Now, you'll need to create the setup.py file. You can use the existing [setup.py template](/src/setup.py) to help you out, but make sure to change the data, for your current application.
+### Step 1.c: Setting up your game
+Now, you'll need to create the setup.py file. You can use the existing [setup.py template](/src/setup.py) to help you out, but make sure to change the data, to match your application.
 
-When you finished creating your setup.py, you'll need to put your ursina game into the [game folder](/src/game)
+When you have finished creating your setup.py, you'll need to put your Ursina Game into the [game folder](/src/game)
 
-Then, you'll need to edit [requirements.txt](/src/requirements.txt). **Do not delete anything.** Just add the dependencies needed for your project, but the base requirements are needed to run ursina
+Then, you'll need to edit [requirements.txt](/src/requirements.txt). **Do not delete anything.** Add the dependencies needed for your project, but keep the base requirements to run Ursina.
 
-As you'll see, there is a [wheels folder](/src/wheels). This is where panda3d and ursina code is stored. As you'll see, there is some .non_patched file. This is because base panda3d wheels filenames are `something.cpython-38.so`, which won't be finded by the app, making the app crash.
+As you'll see, there is a [wheels folder](/src/wheels). This is where panda3d and ursina code is stored. As you'll see, there is some .non_patched file. This is because base panda3d wheels filenames are `something.cpython-38.so`, which won't be found by the app, making the app crash.
 This is why I made a little tool, [wheelpatcher](/src/wheels/wheelpatcher.py). To use it, just do:
 ```bash
 python wheelpatcher.py wheel_name.whl
 ```
 Pre-included wheels are automatically patched.
 
-There is too the [ursina wheel](/src/wheels/ursina-7.0.0-py3-none-any.whl). I did some works to patch it for python3.8, like removed the `deprecated` decorator, and set the minimum version to 3.8, and removed pyperclip from the dependencies.
-And there you finished.
+There is also the [Ursina wheel](/src/wheels/ursina-7.0.0-py3-none-any.whl). I made some changes to patch it for Python 3.8, such as removing the `deprecated` decorator, and set the minimum version to 3.8, and removed pyperclip from the dependencies.
+And that's it! You're done.
 
-# Step 2: Compiling the project
+## Step 2: Compiling the project
 First, you'll need to compile the panda3d mobile into an aab.
 To do that, first change the directory to [src](/src/)
 ```bash
@@ -56,15 +66,15 @@ Then, actually build the aab
 ```bash
 python3.8 setup.py bdist_apps
 ```
-Then, convert the aab to an apks. To do that, install [BundleTool](https://github.com/google/bundletool/releases), and [Java](https://www.oracle.com/java/technologies/downloads/).
+Then, convert the .AAB to an .APKs. To do that, install [BundleTool](https://github.com/google/bundletool/releases), and [Java](https://www.oracle.com/java/technologies/downloads/).
 
 Then, do:
 ```bash
 java -jar Path\To\BundleTool\bundletool.jar build-apks --bundle .\dist\*.aab --output .\dist\app.apks --verbose
 ```
 
-# Step 3: Installing the app
-To install your app, enable Developer Options on your Android phone. Then enable USB Debugging, and plug your phone into your pc with MTP. Make sure you have ADB installed.
+## Step 3: Installing the app
+To install your app, first enable Developer Options on your Android phone. Then enable USB Debugging, and plug your phone into your PC with MTP. Make sure you have ADB installed.
 
 Then, do this:
 ```bash
