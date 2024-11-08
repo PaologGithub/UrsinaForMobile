@@ -4,6 +4,7 @@ Steps:
 * [Step 1 - Setting up the environment](#step-1-setting-up-the-environment)
 * [Step 2 - Compiling the project](#step-2-compiling-the-project)
 * [Step 3 - Installing the app](#step-3-installing-the-app)
+* [Step 4 - Viewing logs](#step-4-optional-viewing-your-app-logs)
 
 ## Step 1: Setting up the environment
 
@@ -79,4 +80,10 @@ To install your app, first enable Developer Options on your Android phone. Then 
 Then, do this:
 ```bash
 java -jar Path\To\BundleTool\bundletool.jar install-apks --apks .\dist\*.apks
+```
+
+## Step 4 (Optional): Viewing your app logs
+If your application crashes, or if you want to view the logs, you run the following command:
+```bash
+adb logcat -v brief -v color 'Panda3D:V' 'Python:V' 'threaded_app:V' 'AndroidRuntime:I' 'linker:W' '*:F'
 ```
