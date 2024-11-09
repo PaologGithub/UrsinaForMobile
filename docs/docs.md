@@ -51,6 +51,12 @@ from setup_ursina_android import setup_ursina_android
 setup_ursina_android()
 ```
 **It needs to be here**, because it is required to get ursina working on Android. So, you need to put them at the **2 first lines**, not after, and if there is a bug/error inside the `setup_ursina_android()` function, please [make an issue](https://github.com/PaologGithub/UrsinaForMobile/issues).
+Then, at the 5th line of [game/setup_ursina_android.py](/src/game/setup_ursina_android.py), edit the app_id variable.
+If your application id in `setup.py` is 'com.mycompany.ursina.android', edit the 5th line to be
+```
+app_id = "com.mycompany.ursina.android"
+```
+
 
 Then, you'll need to edit [requirements.txt](/src/requirements.txt). **Do not delete anything.** Add the dependencies needed for your project, but keep the base requirements to run Ursina.
 
