@@ -42,8 +42,15 @@ If pip shows an error about the wheel not existing, please [make an issue](https
 
 ### Step 1.c: Setting up your game
 Now, you'll need to create the setup.py file. You can use the existing [setup.py template](/src/setup.py) to help you out, but make sure to change the data, to match your application.
+**Do not remove** in 'include_patterns' the 'ursina_assets/**', because it is required to make ursina engine running.
 
-When you have finished creating your setup.py, you'll need to put your Ursina Game into the [game folder](/src/game)
+When you have finished creating your setup.py, you'll need to put your Ursina Game into the [game folder](/src/game).
+Into the first 2 lines of your main script (Default: `src/game/__main__.py`), add these python lines:
+```python
+from setup_ursina_android import setup_ursina_android
+setup_ursina_android()
+```
+**It needs to be here**, because it is required to get ursina working on Android. So, you need to put them at the **2 first lines**, not after, and if there is a bug/error inside the `setup_ursina_android()` function, please [make an issue](https://github.com/PaologGithub/UrsinaForMobile/issues).
 
 Then, you'll need to edit [requirements.txt](/src/requirements.txt). **Do not delete anything.** Add the dependencies needed for your project, but keep the base requirements to run Ursina.
 
