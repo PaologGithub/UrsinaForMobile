@@ -38,6 +38,8 @@ setup(
             # Here put all the resources you need
             'include_patterns': [
 				'game/**',
+                # Don't remove this, it is to include ursina assets
+                'ursina_assets/**',
                 '**/*.png',
                 '**/*.jpg',
                 '**/*.egg',
