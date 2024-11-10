@@ -1,29 +1,26 @@
-# UrsinaForMobile
+# Ursina For Mobile
 ### The new era of ursina
-This repository will help you export your ursina game for mobile.
-Only Android is supported now, and I don't think iOS will ever be supported.
+Did you ever wanted to export your ursina game for android?
+Now you can, with this repo.
 
-Panda3D does not support building for iOS, and even if it could, I don't have an iPhone to test. Sorry, Apple lovers, but only Android is supported.
+Only Android is supported now. I don't think iOS will ever be supported, because Panda3D doesn't support building for iOS, and I don't have an iPhone/Mac to test.
 
+## I want to port my game for android
+To do that, follow [the documentation](/docs/docs.md). Everything will be here.
 
-## How can I use ursina for mobile
-Refer to [The Docs](/docs/docs.md) for instructions on installing Ursina on mobile devices.
+## I need help
+If you need help, if anything doesn't work, you can make an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues), or start a new [discussion](https://github.com/PaologGithub/UrsinaForMobile/discussions).
 
-## What to do if you need help
-If you encounter issues or need assistance, you can start a new [discussion](https://github.com/PaologGithub/UrsinaForMobile/discussions), so I can help you out.
+Your error can be ursina-related too, so go to the [ursina engine discord](https://discord.com/invite/ydXfhyb), I'll be there too.
 
-## State of this project
-This project is in progress. There are a lot of issues.
--  There are several issues with Panda3D for Android, such as app crashes when handling rotations.
--  3D works 1/10 times
+## I want to participate to the new era of ursina
+To do that, you can ameliorate this project by doing a [pull requests](https://github.com/PaologGithub/UrsinaForMobile/pulls), or if you find a bug by making an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues).
 
-This solution **isn't** production-ready.
-If you want to use it, use it only if you want to export a little game, with minimal resources and dependencies.
-For big games, this solution isn't suitable, so I recommend to remake your game in a cross-platform compilable language.
+You can help too the main engine, by doing pull requests or issues in the [ursina github](https://github.com/pokepetter/ursina).
 
-## State of this github repo
-I'm not great at writing tutorials or at English. If you'd like to help by correcting typos or grammar, please make an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues), or a [pull request](https://github.com/PaologGithub/UrsinaForMobile/pulls).
-
-If you notice outdated content or encounter problems with the tutorial, please make an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues).
-
-Thanks
+## Thanks
+Thanks for all the people that helped me in the project, that tested the project.
+* Thanks to pokepetter, for making this amazing 3d project.
+* Thanks to the panda3D developers, for making panda3D.
+* Thanks to rdb (RenderBear), who helped me with the panda3d side.
+* Thanks to you, who is actually reading this and discovering my project
