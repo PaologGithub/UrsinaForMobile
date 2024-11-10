@@ -14,8 +14,8 @@ If you encounter issues or need assistance, you can start a new [discussion](htt
 
 ## State of this project
 This project is in progress. There are a lot of issues.
--  First of all, Ursina **does not** work on Android, because of missing files.
--  Second, there are several issues with Panda3D for Android, such as app crashes when handling rotations.
+-  There are several issues with Panda3D for Android, such as app crashes when handling rotations.
+-  3D works 1/10 times
 
 This solution **isn't** production-ready.
 If you want to use it, use it only if you want to export a little game, with minimal resources and dependencies.
