@@ -1,5 +1,4 @@
 import os
-import urllib.request
 from direct.stdpy.file import open, exists
 
 app_id = "your.company.app.name"
