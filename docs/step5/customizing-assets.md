@@ -35,7 +35,7 @@ You can add assets by doing that:
     from direct.stdpy.file import open, exists
 
     app_id = "your.company.app.name"
-    assets = ['ursina_assets']
+    assets = ['arrow.ursinamesh', 'arrow_down.png', '...']
     my_assets = ['your_first_file.png', 'your_second_file.png']
 
 
@@ -80,4 +80,4 @@ You can add assets by doing that:
                 dest_file.write(src_file.read())
     ```
 
-And you can now import your assets (Do put `game/assets/your_first_file.png`, just put `your_first_file.png`)
+And you can now import your assets (Don't put `game/assets/your_first_file.png`, just put `your_first_file.png`)

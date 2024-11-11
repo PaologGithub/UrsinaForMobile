@@ -5,7 +5,7 @@ To customize your android app, all will be do in [setup.py](/src/setup.py).
 
 I will go through all the available settings, and tell you how you can customize them.
 
-* `setup/name :` Represent the name of the package. It won't do much to your application
+* `setup/name :` Represent the name of the package. That's what will be show in Android Settings>Applications
 
 * `setup/version :` Represent the version of your application. You can see the version by opening android settings, go to Application > Your Application, and you'll see `version THE_VERSION`
 

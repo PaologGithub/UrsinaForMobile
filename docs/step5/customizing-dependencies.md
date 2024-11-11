@@ -1,7 +1,7 @@
 [<- Back (Step 5 - Customizing your project)](/docs/step5/main.md)
 # Ursina on Mobile - Customizing dependencies
 
-If you need to add pypi dependencies, you can add them in [requirements.txt](/src/requirements.txt). **Do not remove anything already in it, or you'll break things.**
+If you need to add PyPI dependencies, you can add them in [requirements.txt](/src/requirements.txt). **Do not remove anything already in it, or you'll break things.**
 
 Sometimes, `python setup.py bdist_apps` can give you an error because of a dependencies. Make sure your dependency is for target `py3-none-any`, and is for python >=3.8.
 
