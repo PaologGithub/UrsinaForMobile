@@ -11,6 +11,20 @@ You can put your ursina game into the [game folder](/src/game). Then, make sure 
     ```
     **This is very important**, because that's what get ursina running on android.
 
+## Testing your game
+As you'll see, building the game takes time. So, if you want to test your game without building you app each time, you can install ursina 7.0.0 for python3.8 by doing this:
+
+```bash
+# I imagine that you're in the project root
+python3.8 -m pip install src/wheels/ursina-7.0.0-py3-none-any.whl
+```
+
+Then, you can test your game by doing this:
+```bash
+# I imagine that you're in the project root, and that your main game file is game/__main__.py
+python3.8 src/game/__main__.py
+```
+
 ## Tips for porting your ursina game for mobile :
 Do you remember what you learn about ursina? Forget, now !!!
 

@@ -30,54 +30,20 @@ You can add assets by doing that:
     Then, just copy the tuple that os.listdir() returned
 
 3) Modify [setup_ursina_android.py](/src/game/setup_ursina_android.py) like this:
-    ```python
-    import os
-    from direct.stdpy.file import open, exists
+    * Line 7: 
+        ```python
+        game_assets = ['your_first_file.png', 'your_second_file.png'] # The same as os.listdir() returned
+        ```
+    * Line 8:
+        ```python
+        game_assets_src_dir = "game/assets" # As said at the top, I imagine your assets are in game/assets directory
+        ```
+        Modifying this line is very important, because it tells the setup that you have assets, because None tells the setup that there isn't any assets, so it won't copy them
 
-    app_id = "your.company.app.name"
-    assets = ['arrow.ursinamesh', 'arrow_down.png', '...']
-    my_assets = ['your_first_file.png', 'your_second_file.png']
+And you can now import your assets, like this: 
+```python
+from ursina import Entity
 
-
-    def setup_ursina_android():
-        # Step 0: Change the path
-        os.chdir(f"/data/data/{app_id}/files/")
-
-        # Step 1: Check if there is ursina assets
-        missing_assets = []
-        for asset in assets:
-            src_path = f"/android_asset/ursina_assets/{asset}"
-            if not exists(src_path):
-                missing_assets.append(asset)
-        
-        if missing_assets:
-            return  # Stop setup if files are missing
-
-        # Step 2: Copy the ursina assets
-        for asset in assets:
-            src_path = f"/android_asset/ursina_assets/{asset}"
-            dest_path = os.path.join(os.getcwd(), os.path.basename(asset))
-
-            with open(src_path, 'rb') as src_file, open(dest_path, 'wb') as dest_file:
-                dest_file.write(src_file.read())
-
-        # Step 3: Check if there is your game assets
-        my_missing_assets = []
-        for asset in my_assets:
-            src_path = f"/android_asset/game/assets/{asset}"
-            if not exists(src_path):
-                my_missing_assets.append(asset)
-        
-        if my_missing_assets:
-            return  # Stop setup if files are missing
-
-        # Step 4: Copy the your game assets
-        for asset in my_assets:
-            src_path = f"/android_asset/game/assets/{asset}"
-            dest_path = os.path.join(os.getcwd(), os.path.basename(asset))
-
-            with open(src_path, 'rb') as src_file, open(dest_path, 'wb') as dest_file:
-                dest_file.write(src_file.read())
-    ```
-
-And you can now import your assets (Don't put `game/assets/your_first_file.png`, just put `your_first_file.png`)
+Entity(texture="your_first_file.png")
+# Write texture="your_first_file.png", not texture="game/assets/your_first_file.png"
+```
