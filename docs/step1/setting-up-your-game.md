@@ -9,7 +9,7 @@ Now, you'll need to create the setup.py file. You can use the existing [setup.py
 
 * Line 23: If you plan to publish your game into the playstore, you'll need to increment the `android_version_code` by one each time before uploading it
 
-* Line 30: Change `'mygame': 'game/__main__.py'` &rarr; `'yourappdisplayname': 'path\to\your\entry\python_file.py'`
+* Line 30: Change `'mygame': 'game/__main__.py'` &rarr; `'yourappdisplayname': 'path/to/your/entry/python_file.py'`
 
 * Line 50 (Optional): Change `'icons'` &rarr; `'icons': {'*': 'mylogo.png'}`
 
