@@ -1,7 +1,7 @@
 [<- Back (Step 5 - Customizing your project)](/docs/step5/main.md)
 # Ursina on Mobile - Customizing assets
 
-For the following tutorial, i imagine that your assets are under `game/assets` folder
+For the following tutorial, i assume that your assets are under `game/assets` folder
 
 You can add assets by doing that:
 1) Change [setup.py](/src/setup.py)/setup/build_apps/include_patterns to add your folder. Example:
@@ -17,7 +17,7 @@ You can add assets by doing that:
     ```
 2) Get all your assets in a list by writing this in your terminal:
     ```bash
-    # I imagine you are at the repo root
+    # I assume you are at the repo root
     cd src
     cd game
     cd assets
@@ -36,7 +36,7 @@ You can add assets by doing that:
         ```
     * Line 8:
         ```python
-        game_assets_src_dir = "game/assets" # As said at the top, I imagine your assets are in game/assets directory
+        game_assets_src_dir = "game/assets" # As said at the top, I assume your assets are in game/assets directory
         ```
         Modifying this line is very important, because it tells the setup that you have assets, because None tells the setup that there isn't any assets, so it won't copy them
 
