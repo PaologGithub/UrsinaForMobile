@@ -1,26 +1,123 @@
-# Ursina For Mobile
-### The new era of ursina
-Did you ever wanted to export your ursina game for android?
-Now you can, with this repo.
+# Ursina For Mobile  
+### The New Era of Ursina Gaming on Android
 
-Only Android is supported now. I don't think iOS will ever be supported, because Panda3D doesn't support building for iOS, and I don't have an iPhone/Mac to test.
+[![GitHub issues](https://img.shields.io/github/issues/PaologGithub/UrsinaForMobile)](https://github.com/PaologGithub/UrsinaForMobile/issues)
+[![GitHub forks](https://img.shields.io/github/forks/PaologGithub/UrsinaForMobile)](https://github.com/PaologGithub/UrsinaForMobile/network)
+[![GitHub stars](https://img.shields.io/github/stars/PaologGithub/UrsinaForMobile)](https://github.com/PaologGithub/UrsinaForMobile/stargazers)
+[![License](https://img.shields.io/github/license/PaologGithub/UrsinaForMobile)](LICENSE)
 
-## I want to port my game for android
-To do that, follow [the documentation](/docs/docs.md). Everything will be here.
+## Overview
 
-## I need help
-If you need help, if anything doesn't work, you can make an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues), or start a new [discussion](https://github.com/PaologGithub/UrsinaForMobile/discussions).
+Ever wanted to export your Ursina game for Android? Now you can!  
+**Ursina For Mobile** brings the power of the Ursina engine to Android devices.  
+> **Note:**  
+> Currently, only Android is supported. iOS is not supported due to Panda3D limitations and testing constraints (i.e., lack of macOS/iOS hardware).
 
-Your error can be ursina-related too, so go to the [ursina engine discord](https://discord.com/invite/ydXfhyb), I'll be there too.
+---
 
-## I want to participate to the new era of ursina
-To do that, you can ameliorate this project by doing a [pull requests](https://github.com/PaologGithub/UrsinaForMobile/pulls), or if you find a bug by making an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues).
+## Table of Contents
 
-You can help too the main engine, by doing pull requests or issues in the [ursina github](https://github.com/pokepetter/ursina).
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running Your Game](#running-your-game)
+- [Documentation](#documentation)
+- [Community and Support](#community-and-support)
+- [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
-## Thanks
-Thanks for all the people that helped me in the project, that tested the project.
-* Thanks to pokepetter, for making this amazing 3d project.
-* Thanks to the panda3D developers, for making panda3D.
-* Thanks to rdb (RenderBear), who helped me with the panda3d side.
-* Thanks to you, who is actually reading this and discovering my project
+---
+
+## Features
+
+- **Android Support:** Export and run your Ursina games on Android devices.
+- **Seamless Integration:** Follow detailed instructions and scripts for porting.
+- **Community Driven:** Join discussions and issues to help evolve the project.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- [Python 3.7+](https://www.python.org/downloads/)
+- [Ursina Engine](https://github.com/pokepetter/ursina)
+- Android SDK & Build Tools (for packaging)
+
+### Installation
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/PaologGithub/UrsinaForMobile.git
+   cd UrsinaForMobile
+   ```
+2. **Set Up Your Environment:**
+   - Create a virtual environment (optional but recommended):
+     ```bash
+     python -m venv venv
+     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+     ```
+   - Install dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+### Running Your Game
+
+Follow the detailed steps in our [documentation](/docs/docs.md) to:
+- Configure your Android project.
+- Package your Ursina game for Android.
+- Troubleshoot common issues.
+
+---
+
+## Documentation
+
+For full details on how to port your game for Android, visit our [comprehensive documentation](/docs/docs.md). It covers:
+- Step-by-step setup instructions.
+- Environment configuration.
+- Build and deployment procedures.
+
+---
+
+## Community and Support
+
+If you encounter any issues or need help:
+- **Issues:** Report bugs or feature requests by opening an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues).
+- **Discussions:** Join our [discussions](https://github.com/PaologGithub/UrsinaForMobile/discussions) for community support.
+- **Discord:** For real-time help, join the [Ursina Engine Discord](https://discord.com/invite/ydXfhyb).
+
+---
+
+## Contributing
+
+Contributions are welcome! Here’s how you can get involved:
+1. **Fork the repository.**
+2. **Create a new branch:**  
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit your changes** with clear and concise messages.
+4. **Push your branch** and create a pull request.
+
+You can also contribute by reporting issues and suggesting improvements.
+
+---
+
+## Acknowledgments
+
+Special thanks to:
+- **pokepetter** – for creating the Ursina Engine.
+- **Panda3D Developers** – for their continuous support and development of Panda3D.
+- **rdb (RenderBear)** – for assistance with Panda3D integration.
+- **The Community** – for testing and contributing to the project.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
