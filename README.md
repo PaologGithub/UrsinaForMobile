@@ -50,21 +50,17 @@ Before you begin, ensure you have the following installed:
 
 ### Installation
 
-1. **Clone the Repository:**
+1. **Clone the Repository:**  
    ```bash
    git clone https://github.com/PaologGithub/UrsinaForMobile.git
    cd UrsinaForMobile
    ```
-2. **Set Up Your Environment:**
-   - Create a virtual environment (optional but recommended):
-     ```bash
-     python -m venv venv
-     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-     ```
-   - Install dependencies:
-     ```bash
-     pip install -r requirements.txt
-     ```
+
+2. **No Environment Setup Required on Main Machine:**  
+   - You don't need to install Ursina or any requirements on your main machine.  
+   - Special wheels and dependencies will be installed directly on the Android device during the build process.  
+
+---
 
 ### Running Your Game
 
