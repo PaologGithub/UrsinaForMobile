@@ -1,7 +1,7 @@
 # Ursina on Mobile - Step 1c: Setting up your game
 
 Now, you'll need to create the setup.py file. You can use the existing [setup.py template](/src/setup.py), but you'll need to change a few lines:
-* Line 14: Change `name='My ursina game'` &rarr; `name='Your game name'`
+* Line 14: Change `name='My ursina game'` &rarr; `name='My Game na'`
 
 * Line 16: Change `version='0.0.0'` &rarr; `version='Your game version'`
 

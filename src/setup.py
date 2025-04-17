@@ -13,14 +13,14 @@ setup(
     # The name of the app
     name='My ursina game',
     # The version of the app
-    version='0.0.0',
+    version='1.0.0',
     options={
         'build_apps': {
             # Uniquely identifies the app
-            'application_id': 'your.company.app.name',
+            'application_id': 'my.company.app.name',
 
             # Update this for every version uploaded to the Play Store
-            'android_version_code': 0,
+            'android_version_code': 1,
 			
 			'platforms': ['android'],
 
@@ -43,6 +43,7 @@ setup(
                 '**/*.png',
                 '**/*.jpg',
                 '**/*.egg',
+                '**/*.py',  # Include all Python files
             ],
             'extra_prc_data': PRC_DATA,
 
