@@ -17,7 +17,7 @@ setup(
     options={
         'build_apps': {
             # Uniquely identifies the app
-            'application_id': 'my.company.app.name',
+            'application_id': 'com.example.mygame',
 
             # Update this for every version uploaded to the Play Store
             'android_version_code': 1,
