@@ -1,8 +1,11 @@
 import os
 import sys
 from direct.stdpy.file import open, exists
+from panda3d.core import ConfigVariableString
 
-app_id = 'your.company.app.name'
+# Get App ID from Prc Data. If android-app-id doesn't exists, the default value is
+# nothing, because it means that you're on desktop/setup.py was not set up
+app_id = ConfigVariableString("android-app-id", "").getValue()
 assets = ['arrow.ursinamesh', 'arrow_down.png', 'arrow_right.png', 'bag.png', 'Bitstream Vera License.txt', 'bow_arrow.png', 'brick.png', 'circle.blend', 'circle.png', 'circle.ursinamesh', 'circle_outlined.png', 'cog.png', 'cube.blend', 'cube.ursinamesh', 'cube_uv_top.blend', 'cube_uv_top.ursinamesh', 'cursor.png', 'diamond.ursinamesh', 'file_icon.png', 'folder.png', 'gem.png', 'grass.png', 'grass_tintable.png', 'heightmap_1.png', 'horizontal_gradient.png', 'icosphere.blend', 'icosphere.ursinamesh', 'items.psd', 'LICENSE.txt', 'line.ursinamesh', 'noise.png', 'noise.wav', 'OpenSans-Regular.ttf', 'orb.png', 'perlin_noise.png', 'plane.blend', 'plane.ursinamesh', 'quad.blend', 'quad.ursinamesh', 'radial_gradient.png', 'rainbow.png', 'reflection_map_3.jpg', 'scale_gizmo.ursinamesh', 'shore.jpg', 'sine.wav', 'sky_default.jpg', 'sky_dome.blend', 'sky_dome.ursinamesh', 'sky_sunset.jpg', 'sphere.blend', 'sphere.ursinamesh', 'square.wav', 'sword.png', 'test_tileset.png', 'tilemap_test_level.png', 'triangle.wav', 'untitled_scene[0,0].csv', 'untitled_scene[1,0].csv', 'untitled_scene[1,1].csv', 'untitled_scene[1,2].csv', 'untitled_scene[2,0].csv', 'untitled_scene[2,3].csv', 'ursina.ico', 'ursina.png','ursina_logo.png', 'ursina_wink_0000.png', 'ursina_wink_0001.png', 'VeraMono.ttf', 'vertical_gradient.png', 'vignette.png', 'white_cube.png', 'wireframe_cube.ursinamesh', 'wireframe_quad.ursinamesh', '_bat_to_exe.bat'] 
 game_assets = []
 game_assets_src_dir = None

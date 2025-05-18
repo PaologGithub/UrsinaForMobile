@@ -1,7 +1,7 @@
 screeninfo
-pyperclip
 panda3d-gltf
+
+./wheels/ursina-7.0.0-py3-none-any.whl
 
 -f wheels
 panda3d
-ursina

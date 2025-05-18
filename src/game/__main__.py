@@ -4,15 +4,8 @@ setup_ursina_android()
 
 from ursina import *
 
-# If you want, you can use this method to destroy camera.overlay, which will show the background of the app.
-# It is because camera.overlay is transparent, but transparency doesn't work on this project.
-# So for now, you can use this to help you
-""" from ursina.ursinastuff import _destroy
-_destroy(camera.overlay, True)
-camera.overlay = Entity() """
-
 # Initialize ursina app
-app = Ursina()
+app = Ursina(editor_ui_enabled=False)
 
 # Window setttings
 window.exit_button.enabled = False
@@ -27,7 +20,7 @@ cube = Entity(model="cube.ursinamesh", scale=.1, position=(0, -.1), origin=(0, 0
 button = Button("Change background color", color=color.lime, pressed_color=color.yellow, origin=(0, 0), position=(0, -.3), scale=(.4, .07), text_color=color.gray)
 
 # Change window color to random color on button click
-def changeBack():
+def changeBackground():
     window.color = color.random_color()
 
 # Make cube rotating
@@ -35,7 +28,7 @@ def update():
     cube.rotation += Vec3(1, 1, 0)
 
 # Add the onclick event
-button.on_click = changeBack
+button.on_click = changeBackground
 
 # Run your app
 app.run()

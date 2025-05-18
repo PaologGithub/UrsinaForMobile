@@ -1,12 +1,17 @@
 from setuptools import setup
 
+app_id = "your.company.app.name"
+
 # Set renderer to pandagles2 (shaders) with pandagles (FFP) as fallback
-PRC_DATA = '''
+# Add application id to PRC Data so that we can get it in the app
+PRC_DATA = f'''
 load-display pandagles2
 aux-display pandagles
 
 notify-level info
 gl-debug true
+
+android-app-id {app_id}
 '''
 
 setup(
@@ -17,7 +22,7 @@ setup(
     options={
         'build_apps': {
             # Uniquely identifies the app
-            'application_id': 'your.company.app.name',
+            'application_id': app_id,
 
             # Update this for every version uploaded to the Play Store
             'android_version_code': 0,
@@ -30,7 +35,7 @@ setup(
                 'mygame': 'game/__main__.py',
             },
             'plugins': [
-                # Note use of pandagles2/pandagles instead of pandagl
+                # Use of pandagles2/pandagles instead of pandagl
                 'pandagles2',
                 'pandagles',
                 'p3openal_audio',

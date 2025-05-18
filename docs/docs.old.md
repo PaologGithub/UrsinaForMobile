@@ -18,24 +18,27 @@ First, clone this repository with:
 git clone https://github.com/PaologGithub/UrsinaForMobile
 ```
 
-Then, install [Python 3.8](https://www.python.org/downloads/release/python-380/)
-This step is really important, because Panda3D for Android requires Python 3.8.
-I tested with Python 3.10, and it didn't work, because of outdated wheels.
+Then, install [Python 3.13](https://www.python.org/downloads/release/python-313/)
+This step is really important, because Panda3D for Android requires Python 3.13.
 
 ### Step 1.b: Installing Panda3D
 Then, you'll need to install Panda3D 1.11. For this step, please run this command:
 
-For Windows:
+For Windows - 64 BIT:
 ```bash
-python3.8 -m pip install https://buildbot.panda3d.org/downloads/68f0931f43284345893a90d5bba9ba5df8aa53bb/panda3d-1.11.0.dev2480-cp38-cp38-win_amd64.whl
+python3.13 -m pip install https://buildbot.panda3d.org/downloads/55fa0e9912633d0406f56033ec166b853e482717/panda3d-1.11.0.dev3596-cp313-cp313-win_amd64.whl
 ```
-For macOS X (Not sure if it works with macOS 11+):
+For macOS - Universal:
 ```bash
-python3.8 -m pip install https://buildbot.panda3d.org/downloads/68f0931f43284345893a90d5bba9ba5df8aa53bb/panda3d-1.11.0.dev2480-cp38-cp38-macosx_10_9_x86_64.whl
+python3.13 -m pip install https://buildbot.panda3d.org/downloads/5b6318e77f3cb1fea519bbd3cd637ad9b0be1606/panda3d-1.11.0.dev3585-cp313-cp313-macosx_11_0_universal2.whl
 ```
-For Linux:
+For macOS - 64 BIT:
 ```bash
-python3.8 -m pip install https://buildbot.panda3d.org/downloads/68f0931f43284345893a90d5bba9ba5df8aa53bb/panda3d-1.11.0.dev2480-cp38-cp38-manylinux2010_x86_64.whl
+python3.13 -m pip install https://buildbot.panda3d.org/downloads/5b6318e77f3cb1fea519bbd3cd637ad9b0be1606/panda3d-1.11.0.dev3585-cp313-cp313-macosx_10_13_x86_64.whl
+```
+For Linux - 64 BIT:
+```bash
+python3.13 -m pip install https://buildbot.panda3d.org/downloads/5b6318e77f3cb1fea519bbd3cd637ad9b0be1606/panda3d-1.11.0.dev3585-cp313-cp313-manylinux2014_x86_64.whl
 ```
 
 If pip shows an error about the wheel not existing, please [make an issue](https://github.com/PaologGithub/UrsinaForMobile/issues), so I can remake the links.
@@ -78,7 +81,7 @@ cd src/
 ```
 Then, actually build the aab
 ```bash
-python3.8 setup.py bdist_apps
+python3.13 setup.py bdist_apps
 ```
 Then, convert the .AAB to an .APKs. To do that, install [BundleTool](https://github.com/google/bundletool/releases), and [Java](https://www.oracle.com/java/technologies/downloads/).
 
