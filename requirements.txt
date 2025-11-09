@@ -1,0 +1,7 @@
+screeninfo
+panda3d-gltf
+
+./project/wheels/ursina-8.2.0+android-py3-none-any.whl
+
+-f project/wheels
+panda3d

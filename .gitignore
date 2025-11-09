@@ -1,3 +1,6 @@
 build/
 dist/
 __pycache__/
+project/builder.log
+assets/assets.gen
+assets/assets_DEBUG.json

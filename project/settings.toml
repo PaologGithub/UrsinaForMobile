@@ -1,0 +1,41 @@
+[android]
+# Identifier used by android
+id          = "your.company.app.name"
+# Version of your game
+version     = "0.0.0"
+# Name displayed in the settings page (not the launcher)
+name        = "My ursina game"
+# Icon of the application
+icon        = "assets/logo.png"
+# Classifiers of the application
+classifiers = ["Topic :: Games/Entertainment"]
+
+[application]
+# Name displayed on the launcher
+# Can now have spaces in it
+# Uh no in reality
+name        = "MyUrsinaGame"
+# Main python file of the game
+startfile   = "src/__main__.py"
+
+[build]
+# Android version code. NOT EQUAL to android.version, used by Google Play Store
+# Each time you update your app on the Play Store, you should increment this by one.
+vercode     = 0
+# Platforms supported by your app
+platforms   = ["android"]
+# What file to includes
+includes    = [
+    "assets/game_assets/**",    # Game assets
+    "assets/ursina_assets/**",  # Ursina assets, don't remove this.
+    "assets/assets.gen",        # Generated list of assets
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.egg",
+]
+
+[assets]
+# Ursina assets dir
+ursina_dir  = "assets/ursina_assets"
+# Game assets dir
+game_dir    = "assets/ursina_assets"

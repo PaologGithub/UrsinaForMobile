@@ -10,7 +10,7 @@ Now you can, with this repo.
 Only Android is supported now. I don't think iOS will ever be supported, because Panda3D doesn't support building for iOS, and I don't have an iPhone/Mac to test.
 
 ## I want to port my game for android
-To do that, follow [the documentation](/docs/docs.md). Everything will be here.
+To do that, follow [the documentation](https://paologgithub.github.io/ufmdocs). Everything will be here.
 
 ## I need help
 If you need help, if anything doesn't work, you can make an [issue](https://github.com/PaologGithub/UrsinaForMobile/issues), or start a new [discussion](https://github.com/PaologGithub/UrsinaForMobile/discussions).
