@@ -38,4 +38,5 @@ includes    = [
 # Ursina assets dir
 ursina_dir  = "assets/ursina_assets"
 # Game assets dir
-game_dir    = "assets/ursina_assets"
+
+game_dir    = "assets/game_assets"
