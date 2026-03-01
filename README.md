@@ -1,7 +1,3 @@
-# ANNOUNCEMENT
-UfM is in a freeze state. Please watch the discussion: https://github.com/PaologGithub/UrsinaForMobile/discussions/19.
-It will go back on 25 of September 2025, don't worry !!!
-
 # Ursina For Mobile
 ### The new era of ursina
 Did you ever wanted to export your ursina game for android?
